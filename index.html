@@ -1,2 +1,18 @@
-<p>你们好</p>
-<p>这是一个测试页面</P>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    输入圆的半径：<input type="text" id="inp">
+    <input type="button" value="确定" onclick="test()"> 
+</body>
+</html>
+<script>
+    function test(){
+        var inp = parseFloat(document.getElementById('inp').value);
+        var s = 3.14 * (inp * inp);
+        alert('面积为：' + s)
+    }
+</script>
