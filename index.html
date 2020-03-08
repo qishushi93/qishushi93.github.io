@@ -2,42 +2,27 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>直男口红颜色辨别网</title>
-		<script type="text/javascript">
-			//rgb整合函数
-		function changeColor(a, b, c){
-			var a= parseFloat(document.getElementById('r').value);
-			var b= parseFloat(document.getElementById('g').value);
-			var c= parseFloat(document.getElementById('b').value);
-			var obj_test= document.getElementById("last");
-			obj_test.style.backgroundColor = "rgb("+a+","+b+","+c+")";
-			pd(a,b,c);
-			}
-			//颜色判断
-		function pd(a,b,c){
-			if(a==117&&b==15&&c==26) document.getElementById("number").value = "这是姨妈色";
-			if(a==160&&b==33&&c==18) document.getElementById("number").value = "这是番茄橘";
-			if(a==178&&b==48&&c==41) document.getElementById("number").value = "这是枫叶砖红色";
-			if(a==194&&b==3&&c==13)  document.getElementById("number").value = "这是正红色";
-			if(a==106&&b==5&&c==00)  document.getElementById("number").value = "这是牛血红";		
-			if(a==239&&b==93&&c==71)  document.getElementById("number").value = "这是小羊皮暖柿红";
-			if(a==191&&b==27&&c==28)  document.getElementById("number").value = "这是正橘色";
-			if(a==242&&b==122&&c==122)  document.getElementById("number").value = "这是珊瑚粉";
-			if(a==208&&b==10&&c==57)  document.getElementById("number").value = "这是玫红色";	
-		}
-		</script>
+		<title>视频解析实例</title>
 	</head>
 	<body>
-		<div align="center">
-			<h1>直男口红辨色</h1>
-		<strong>RGB值:</strong><br/>
-		r:<input type="text" style="text-align:center;width:30px;height:10px"  maxlength="3" id="r" value="0"    onclick="#"   /><br />		
-		g:<input type="text" style="text-align:center;width:30px;height:10px"  maxlength="3" id="g" value="0"    onclick="#"   /><br />
-		b:<input type="text" style="text-align:center;width:30px;height:10px"  maxlength="3" id="b" value="0"    onclick="#"   /><br /><br/>
-		<input type="text" id="last" style="background-color:rgb(0,0,0);height:80px;width:80px;" disabled="disabled" /><br/>
-		<input type="button"  style="width:70px;height:35px;font-size:25px;"   id="minus"  value=" 开始分析 " onclick="changeColor()"  /><br />
-		<input type="text"   style="text-align:center;width:100px;height:50px" id="number"  disabled="disabled" /><br />
-		<input type="color" />
-		</div>
+		<form name="myForm">
+			<input type="text" name="inputBox">
+			<input type="button" value="开始解析" onclick="getInputVal()">
+		</form>
+		
+		<script>
+			function getInputVal(){
+				var inputVal = myForm.inputBox.value;
+				var b="https://jx.hh66.xyz/jiexi/?url=";
+				var c=b+inputVal;
+				if(inputVal){
+					window.open(c);
+				}else{
+					alert('请在输入框中填点东西');
+				}
+			}
+		</script>
+		
+		
 	</body>
 </html>
