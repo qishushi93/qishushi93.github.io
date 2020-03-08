@@ -6,11 +6,34 @@
 	</head>
 	<body>
 		<form name="myForm">
+			<div style="text-align: center;">
+			<h4 align="center">如果解析失败请更换接口</h4>
+			<a>接口一：</a>
 			<input type="text" name="inputBox">
 			<input type="button" value="开始解析" onclick="getInputVal()">
+			<br/>
+			<a>接口二：</a>
+			<input type="text" name="inputBox2">
+			<input type="button" value="开始解析" onclick="getInputVal2()">
+			<br />
+			<h6>本网站仅供测试使用，禁止非法商用。</h6>
+			</div>
 		</form>
 		
 		<script>
+			
+			function getInputVal2(){
+				var inputVal = myForm.inputBox2.value;
+				var b="http://api.baiyug.vip/index.php?url=";
+				var c=b+inputVal;
+				if(inputVal){
+					window.open(c);
+				}else{
+					alert('请在输入框中填点东西');
+				}
+			}
+
+			
 			function getInputVal(){
 				var inputVal = myForm.inputBox.value;
 				var b="https://jx.hh66.xyz/jiexi/?url=";
@@ -21,8 +44,13 @@
 					alert('请在输入框中填点东西');
 				}
 			}
+			
+			
+			
+			
 		</script>
 		
 		
 	</body>
 </html>
+
